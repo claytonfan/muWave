@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <title>Music as Ecosytem - Concept</title>
+  </head>
+  <body style="   font-family: Arial; color: rgb(0, 0, 0); background-color: rgb(153, 179, 124);"
+
+    alink="#000099" link="#000099" vlink="#990099">
+    <div style="text-align: left;">
+      <h2>Music as Ecosystem </h2>
+      <h3>Music Generation by Self-Organization and Genetic Evolution</h3>
+      <h3 class="western" style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"
+
+        align="LEFT"><font color="#333333"><font face="Arial Black, sans-serif"><font
+
+              size="2"><i><span style="text-decoration: none;"><b>Copyright ©
+                    2011-2018 Clayton Fan. All rights reserved.</b></span></i></font></font></font></h3>
+      <h4></h4>
+    </div>
+    <h3>Background </h3>
+    While Charles Darwin (1809-1882) identified two phenomena — variation by
+    random mutation and adaptation by natural selection — in his theory of
+    evolution, he did not provide a mechanism for inheritance. Although, at the
+    time, Jean-Baptiste Lamarck (1744-1829) offered a theory of inheritance of
+    acquired traits, it was soon supplanted by the classical theory of genetics,
+    founded by Gregor Johann Mendel (1822-1884) in his pea experiments and later
+    elaborated by Thomas Hunt Morgan (1866–1945) in his chromosome theory.
+    Recently, with the advent of the field of epigenetics, Lamarckism has
+    experienced a revival.<br>
+    <table style="margin: 8px; float: right; text-align: left; width: 360px; height: 180px;"
+
+      cellspacing="0" cellpadding="8" border="1">
+      <tbody>
+        <tr>
+          <td>Neo-Darwinian Evolution<br>
+            <ol>
+              <li>Variation — Random mutation</li>
+              <li>Adaptation — Natural Selection</li>
+              <li>Inheritance — Genetic reproduction</li>
+            </ol>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    Although examples of evolution by natural selection is ubiquitous, it is but
+    one system of an encompassing phenomenon of self-organization.
+    Self-organization is a process by which global pattern emerges solely from
+    local interactions among components of a system. The rules specifying such
+    interactions are executed using local information, without reference to the
+    global pattern.<br>
+    <br>
+    Order can emerge from apparent chaos of a self-organizing dynamical, complex
+    system. In living systems, self-organization is responsible for social
+    behaviors in insects, patterns in animal body coverings, networks of spiking
+    neurons, selection of division sites in cells, formation of microtubules,
+    etc. In non-living systems, self-organization is involved in nonequilibrium
+    thermodynamics, molecular self-assembly, diffusion, crystal formation,
+    geological formation, sand dune ripple formation, etc.<br>
+    <br>
+    <table style="margin: 8px; float: right; text-align: left; width: 360px; height: 320px;"
+
+      cellspacing="0" cellpadding="8" border="1">
+      <tbody>
+        <tr>
+          <td>Self-Organization<br>
+            <ul>
+              <li>Emergent property
+                <ul>
+                  <li>Not imposed by an external ordering influence</li>
+                  <li>Arises from interactions, direct or indirect, among the
+                    system’s components</li>
+                </ul>
+              </li>
+              <li>Local interaction
+                <ul>
+                  <li>No central authority</li>
+                  <li>No blueprints</li>
+                  <li>No recipes</li>
+                  <li>No templates</li>
+                </ul>
+              </li>
+            </ul>
+            Keywords: dynamical systems, complexity, chaos, synchrony, fractal,
+            emergence.
+            <ol>
+            </ol>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    In the study of fractal geometry, where we try to make sense of chaotic
+    patterns in space and time, it is believed that self-organization follows
+    fractal laws and fractal patterns emerge from self-organizing systems. With
+    the same logic, the process of genetic evolution emerges from information
+    provided by living systems, and species arise from genetic evolution.
+    Arguably, such observation is consistent with phenomena ranging from the
+    behavior of elementary particles to the state of the universe, and just
+    about everything in between.<br>
+    <br>
+    Currently, self-organization as applied to the human society is widely
+    studied — from market economics to linguistics, from herd behavior to drug
+    trafficking, and from computer networks to social networks, all of which
+    operate within the framework of a system undergoing natural selection.<br>
+    <br>
+    Another widely recognized emergent property is synchrony. Activities of
+    spiking neurons, flashes of fireflies, chirps of crickets or applause of an
+    audience falls quickly into a pattern without direction from a central
+    authority. In music, a jam session produces ordered sound without a
+    director. It is conceivable that if we treat music as a multi-species
+    evolutionary system, where rudimentary musical phrases are primitive
+    organisms undergoing genetic evolution and community self-organization, an
+    optimized piece of music will emerge.<br>
+    <hr style="height: 2px; width: 60%;">
+    <h3>Building an Ecosystem</h3>
+    <table style="margin: 8px; float: right; text-align: left; width: 360px; height: 240px;"
+
+      cellspacing="0" cellpadding="8" border="1">
+      <tbody>
+        <tr>
+          <td style="text-align: center;">A Simple Genetic Algorithm<br>
+            <ul style="text-align: left;">
+              <li>Create an initial random population</li>
+              <li>For each generation
+                <ul>
+                  <li>For each organism
+                    <ul>
+                      <li>Determine fitness for survival</li>
+                    </ul>
+                  </li>
+                  <li>For every two organisms
+                    <ul>
+                      <li>Select two parents based on fitness</li>
+                      <li>Reproduce</li>
+                      <li>Mutate</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>Replace old population with new population</li>
+              <li>Stop after specified number of generations</li>
+              <li>Return one optimal organism</li>
+            </ul>
+            <ol>
+            </ol>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    In building an optimized biological ecosystem, the goal is to evolve and
+    concurrently self-organize populations of species into interacting, stable
+    communities.<br>
+    <br>
+    The method is to build on a rudimentary genetic algorithm with computational
+    techniques based on self-organization principles.
+    <h4>Genetic Evolution</h4>
+    A species adapts to its environment by undergoing the following stages of
+    neo-Darwinian evolution:<br>
+    <ul>
+      <li>Selection of the fittest</li>
+      <li>Recombinant reproduction</li>
+      <li>Variation by mutation</li>
+    </ul>
+    A common genetic algorithm models a organism with one strand of DNA
+    undergoing the these three stages of adaptation.<br>
+    <br>
+    For our purposes, the evolutionary process is implemented computationally by
+    an enhanced genetic algorithm, which emulates an ecosystem with the
+    following elements.<br>
+    <ul>
+      <li>An <span style="font-weight: bold;">ecosystem</span> consists of
+        multiple species.</li>
+      <li>Each <span style="font-weight: bold;">species</span> consists of a
+        population of organisms.</li>
+      <li>Each <span style="font-weight: bold;">organism</span> contains one or
+        more chromosomes.</li>
+      <li>Each <span style="font-weight: bold;">chromosome</span> consists of
+        two strands of DNA, each comprises a sequence of nucleotides.</li>
+      <li>Each <span style="font-weight: bold;">nucleotide</span> is the basic
+        unit of genotype which undergoes reproduction and mutation.</li>
+      <li>Each <span style="font-weight: bold;">gene</span>, which consists of
+        one or more nucleotides, is expressed as a phenotype of an organism
+        subject to selection.</li>
+    </ul>
+    The goal is to evolve one or more species, with each organism of a species
+    possessing a random set of genetic materials, into an optimal population
+    based on fitness criteria. In each generation, each organism's genes are
+    evaluated and assigned a fitness value. Then the organism are selected for
+    mating. The fitter the organism, the more probable that it is selected for
+    mating and more of its phenotype will be inherited. Reproduction is optional
+    under the constraint of a reproduction rate of a species. During
+    reproduction, each parent's DNA is cut at a common point. The sections are
+    swapped by crossover and recombination, producing two children. Mutation of
+    the offspring is optional based on a small mutation rate imposed on each
+    nucleotide. When it does occur, a random nucleotide replaces an existing
+    one. The process continues for the new generation.<br>
+    <br>
+    The reproduction and mutation processes are enhanced with
+    self-organizational computations.<br>
+    <br>
+    An emergent property of Darwinian evolution is speciation by divergence,
+    where under certain conditions, a population of organisms branch to evolve
+    as a different species. The enhanced genetic algorithm includes this
+    evolutionary process. Interdependent species may co-evolve from the start
+    under the condition of the environment while other species evolve, after
+    several generations, when they diverge from established species. Another
+    mode of speciation is hybridization where a new species emerge from genetic
+    materials of two existing species. <br>
+    <span style="font-style: italic;"></span>
+    <h4>Epigenetic Inheritance </h4>
+    While genetic evolution enables heritable changes in the DNA sequence, or
+    nucleotides, thus determining the genotype of an organism, mechanisms of
+    epigenetic inheritance enable such changes in gene expression thus
+    determining the phenotype. It is the phenotype of an organism that undergoes
+    selection. The mechanisms used in our model include adaptation algorithms
+    following self-organization principles. <br>
+    <h4>Community Organization</h4>
+    Given a primitive species, genetic evolution with epigenetic inheritance
+    promises to produce a population of organisms with improved fitness. In
+    building an optimal community, organisms in each species interact with each
+    other, while multiple communities of species synchronizes with each other.
+    Whereas adaptation by evolutionary inheritance proceeds vertically in time,
+    organisms in an ecosystem may organize laterally to build a community. A
+    stage is added to the evolutionary algorithm in order to enable<br>
+    <ol>
+      <li>Members of each species to organize among themselves to form a fitter
+        community</li>
+      <li>Multiple species of the ecosystem organize with each other to form
+        stable inter-species community</li>
+    </ol>
+    <h4>Self-Organization in Evolution</h4>
+    The evolutionary algorithm applies several self-organizational methods for
+    computation. Cellular automaton and neural network are adaptation method
+    that are used in the genetic expression and species selection. The
+    phenomenon of fractals is used in species organization.
+    <ul>
+    </ul>
+    <table style="margin: 8px; float: right; text-align: left; width: 360px; height: 240px;"
+
+      cellspacing="0" cellpadding="8" border="1">
+      <tbody>
+        <tr>
+          <td style="text-align: center;">Ecosystem-Music Equivalence<br>
+            <br>
+            <table style="width: 80%; text-align: left; margin-left: auto; margin-right: auto;"
+
+              cellspacing="2" cellpadding="2" border="1">
+              <tbody>
+                <tr>
+                  <td style="text-align: center; width: 50%;">World</td>
+                  <td style="text-align: center; width: 50%;">Song</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">Species</td>
+                  <td style="text-align: center;">Part</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">Organism</td>
+                  <td style="text-align: center;">Phrase</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">Chromosome</td>
+                  <td style="text-align: center;">Chord</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">Nucleotide</td>
+                  <td style="text-align: center;">Unit</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">Gene</td>
+                  <td style="text-align: center;">Event</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <ol>
+            </ol>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <h3>Building a Musical Equivalent</h3>
+    <span style="font-style: italic;"></span> The goal is to evolve and
+    concurrently self-organize sets of random musical events into an optimized
+    song in MIDI file format.<br>
+    <br>
+    The method is to model the musical system after an ecosystem, where the
+    world contains multiple species that evolve and interact under conditions of
+    their environment and rules for fitness into an optimal state.<br>
+    <br>
+    In emulation of an ecosystem, the music generation process is implemented
+    computationally by an enhanced genetic algorithm with the following
+    elements.<br>
+    <ul>
+      <li>A <span style="font-weight: bold;">song</span> consists of multiple
+        parts or MIDI tracks, usually organized by instruments.</li>
+      <li>Each <span style="font-weight: bold;">part</span> consists of a
+        population of phrases.</li>
+      <li>Each <span style="font-weight: bold;">phrase</span> contains one or
+        more chords or harmonic parts.</li>
+      <li>Each <span style="font-weight: bold;">chord</span> consists of two
+        distinctive strands of musical units arranged in sequence.</li>
+      <li>Each <span style="font-weight: bold;">unit</span> undergoes
+        reproduction and mutation.</li>
+      <li>Each <span style="font-weight: bold;">event</span>, which consists of
+        one or more units, is expressed as a musical note of a phrase subject to
+        selection.</li>
+    </ul>
+    As in genetic evolution, the goal is to evolve one or more parts, with each
+    phrase of a part possessing a random set of musical units, into an optimal
+    song based on fitness criteria. As in Darwinian speciation a song containing
+    multiple parts may co-evolve in synchrony, under the constraint of initial
+    conditions and criteria for optimal sound. Whereas other parts may diverge
+    from partially developed, existing parts or a hybrid may form from two
+    existing parts.<br>
+    <br>
+    <p> Whereas genetic evolution enables heritable changes in musical units,
+      mechanisms of epigenetic inheritance enable such changes by the
+      interpretation, and realization, of the units into musical events. It is
+      the expressed musical events of a phrase that undergoes selection.</p>
+    <span style="font-weight: bold;"> </span>Given a primitive set of musical
+    units, genetic evolution with epigenetic inheritance promises to produce a
+    population of phrases with improved fitness. From these phrases, the
+    algorithm constructs a musical architecture with self-organization
+    principles to enable <br>
+    <ol>
+      <li>Members of each parts to organize among themselves to produce a
+        musical track</li>
+      <li>Multiple parts of the song organize with each other to synchronized
+        song</li>
+    </ol>
+    <br>
+    <table style="margin: 8px auto; float: right; width: 100%; height: 360px; text-align: left;"
+
+      cellspacing="0" cellpadding="8" border="1">
+      <tbody>
+        <tr>
+          <td style="vertical-align: top; width: 50%;">An Example of an Enhanced
+            Evolutionary Algorithm<br>
+            <ol>
+              <li>For each species of the world
+                <ol>
+                  <li>For each organism in the population
+                    <ol>
+                      <li>Create a random set of genetic material</li>
+                    </ol>
+                  </li>
+                </ol>
+                <ol>
+                </ol>
+              </li>
+              <li>For each generation
+                <ol>
+                  <li>For each species
+                    <ol>
+                      <li>For each organism
+                        <ol>
+                          <li>Express genes</li>
+                          <li>Determine its fitness for survival</li>
+                        </ol>
+                      </li>
+                      <li>Adjust environmental conditions</li>
+                      <li>For every two organisms
+                        <ol>
+                          <li>Select two parents based on fitness</li>
+                          <li>Reproduce</li>
+                          <li>Mutate nucleotides of two offspring</li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>Speciate by divergence from an existing species</li>
+                  <li>Organize community</li>
+                  <li>Replace old population with new population
+                    <ol>
+                    </ol>
+                  </li>
+                  <li>Stop if optimal fitness of all species is achieved or
+                    maximum number of generations is exhausted</li>
+                </ol>
+              </li>
+              <li>Return one ecosystem</li>
+            </ol>
+          </td>
+          <td style="width: 50%; vertical-align: top;">Musical Equivalence<br>
+            <ol>
+              <li>For each part of the song
+                <ol>
+                  <li>For each phrase in the population</li>
+                </ol>
+                <ol>
+                  <ol>
+                    <li>Create a random set of musical units</li>
+                  </ol>
+                </ol>
+              </li>
+              <li>For each generation
+                <ol>
+                  <li>For each part
+                    <ol>
+                      <li>For each phrase
+                        <ol>
+                          <li>Express note events</li>
+                          <li>Determine its musical fitness</li>
+                        </ol>
+                      </li>
+                      <li>Adjust parameters</li>
+                      <li>For every two phrases
+                        <ol>
+                          <li>Select two phrases based on fitness</li>
+                          <li>Reproduce</li>
+                          <li>Mutate units of two child phrases</li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>Create a new part by cloning an existing part</li>
+                  <li>Build architecture from musical phrases</li>
+                  <li>Replace old population with new population
+                    <ol>
+                    </ol>
+                  </li>
+                  <li>Stop if optimal fitness of all parts is achieved or
+                    maximum number of generations is exhausted</li>
+                </ol>
+              </li>
+              <li>Return one song</li>
+            </ol>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr style="height: 2px; width: 60%;"><br>
+    <br>
+  </body>
+</html>
