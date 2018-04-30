@@ -1,5 +1,6 @@
 package com.wavematters.muwave;
 
+import android.content.Context;
 import android.content.res.AssetManager;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
@@ -25,6 +26,9 @@ import java.io.OutputStreamWriter;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Context thisContext = getApplicationContext();
+    private String  thisPath    = thisContext.getFilesDir().getPath();
 
     private static final String TAG = "WM";
     Integer songLen = 30;    // song duration in seconds
@@ -77,64 +81,56 @@ public class MainActivity extends AppCompatActivity {
         genreList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //
-                // TODO: Get directories from context
-                //
-                String url = "file:///data/data/com.wavematters.muwave/wm.mid";
-                Log.i(TAG, "position clicked = " + position);
-                Object ItemObj = genreList.getItemAtPosition(position);
 
-                songName = genres.get(position).getName();
-                String muSpec = genres.get(position).getSpec();
-                String fpath = "/data/data/com.wavematters.muwave/" + muSpec;
-                // Context.getFilesDir().getPath();
-                File fspec = new File(fpath);
-
-                Log.i(TAG, "Command = " + genres.get(position).getCmd() + " Spec = " + muSpec);
-
-                if (fspec.delete()) {
-                    Log.i(TAG, "Spec File " + fpath + " deleted");
-                } else {
-                    Log.i(TAG, "Spec File " + fpath + " NOT deleted");
-                }
-                if (muSpec != null && !muSpec.equals("none")) {
-                    try {
-                        if (copySpec(muSpec) <= 0) {
-                            Log.i(TAG, fpath + " not copied");
-                        } else {
-                            String command = "wm -i " + fpath + " -t " + songLen
-                                    + " -o /data/data/com.wavematters.muwave/wm.mid";
-                            //
-                            // TODO: Pop up dialogoe box for 3 choice
-                            //   -- Play after music is generated
-                            //   -- Do not Play, or
-                            //   -- Cancel
-                            //
-                            int muStat = muWave(command);
-                            switch (muStat) {
-                                case 0:
-                                    Log.i(TAG, "muWave normal exit");
-                                    //
-                                    // Future: Instead of saving song name.
-                                    // Read song name from MIDI file when needed
-                                    //
-                                    writeName(songName);
-                                    // Prepare and then play music
-                                    muPlay.prepare();
-                                    break;
-                                case 1:
-                                    Log.i(TAG,
-                                      "Program Error. Syntax error muWave spec.");
-                                    break;
-                                default:
-                                    Log.i(TAG, "Error. muWave error exit");
-                            }
+            Object ItemObj = genreList.getItemAtPosition(position);
+            songName = genres.get(position).getName();
+            String muSpec = genres.get(position).getSpec();
+            String fpath = thisPath + "/" + muSpec;
+            // Context.getFilesDir().getPath();
+            File fspec = new File(fpath);
+            if (fspec.delete()) {
+                Log.i(TAG, "Spec File " + fpath + " deleted");
+            } else {
+                Log.i(TAG, "Spec File " + fpath + " NOT deleted");
+            }
+            if (muSpec != null && !muSpec.equals("none")) {
+                try {
+                    if (copySpec(muSpec) <= 0) {
+                        Log.i(TAG, fpath + " not copied");
+                    } else {
+                        String command = "wm -i " + fpath + " -t " + songLen
+                                + " -o " + thisPath + "/wm.mid";
+                        //
+                        // TODO: Pop up dialogoe box for 3 choice
+                        //   -- Play after music is generated
+                        //   -- Do not Play, or
+                        //   -- Cancel
+                        //
+                        int muStat = muWave(command);
+                        switch (muStat) {
+                            case 0:
+                                Log.i(TAG, "muWave normal exit");
+                                //
+                                // Future: Instead of saving song name.
+                                // Read song name from MIDI file when needed
+                                //
+                                writeName(songName);
+                                // Prepare and then play music
+                                muPlay.prepare();
+                                break;
+                            case 1:
+                                Log.i(TAG,
+                                  "Program Error. Syntax error muWave spec.");
+                                break;
+                            default:
+                                Log.i(TAG, "Error. muWave error exit");
                         }
-                    } catch (Exception e) {
-                        Log.i(TAG, "Exception raised on click to start");
-                        e.printStackTrace();
                     }
+                } catch (Exception e) {
+                    Log.i(TAG, "Error. Exception raised on click to start");
+                    e.printStackTrace();
                 }
+            }
              }
         });
     }
@@ -144,8 +140,7 @@ public class MainActivity extends AppCompatActivity {
         // Temporary method to store song name
         // TODO: read name from MIDI file
         OutputStream os = new FileOutputStream(
-                "/data/data/com.wavematters.muwave/wmnamecq.txt");
-        Log.i(TAG, "Name File name.txt created");
+                thisPath + "/wmnamecq.txt");
         OutputStreamWriter writer = new OutputStreamWriter(os);
         writer.write(name + "\n");
         writer.flush();
@@ -161,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             AssetManager specFiles = getAssets();
             is = specFiles.open(fileSpec);
-            os = new FileOutputStream("/data/data/com.wavematters.muwave/" + fileSpec);
+            os = new FileOutputStream( thisPath + "/" + fileSpec);
             InputStreamReader inreader = new InputStreamReader(is);
             BufferedReader reader = new BufferedReader(inreader);
             OutputStreamWriter writer = new OutputStreamWriter(os);
