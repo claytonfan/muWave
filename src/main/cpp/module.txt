@@ -1,0 +1,30 @@
+Music evolution engine source files not included
+
+wm.c		Enters program
+
+init.c		Initializes parametes
+cmd.c		Processes command line inpu
+spec.		Processes specifications by input file
+music.c		Processes specifications of musicl genres
+
+eco.c		Evolves ecosystem oinmain loop -- included
+popc		Manages population
+
+evo.c		Contains functions for genetic evolution
+epi.c		Contains functions for epigenetic intervention
+div.c		Contains functions for species divergence and hybridization
+org.c		Contains functiosn for community to self-organize
+
+gene.c		Expresses genes
+fit.c		Computes fitness
+
+midi.c		Generates MIDI output
+
+util.c		Contains Utility functions
+out.c		Displays progress, data and statistics
+
+Headers
+fit.h
+pop.h
+util.h
+wm.h
