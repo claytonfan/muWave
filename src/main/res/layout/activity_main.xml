@@ -2,16 +2,25 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintTop"
+    android:id="@+id/top"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.wavematters.muwave.MainActivity">
+
+    <ImageView
+        android:id="@+id/wmLogo"
+        android:layout_width="256dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wmmobile" />
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintSong"
         android:layout_width="240dp"
         android:layout_height="24dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="72dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,12 +28,13 @@
 
         <SeekBar
             android:id="@+id/songBar"
-            android:thumbTint="@color/colorPrimaryRed"
             android:layout_width="224dp"
             android:layout_height="24dp"
+            android:progressBackgroundTint="@color/colorHideBar"
+            android:progressTint="@color/colorHideBar"
+            android:thumbTint="@color/colorWmRed"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
@@ -33,62 +43,92 @@
         android:id="@+id/constraintProgress"
         android:layout_width="240dp"
         android:layout_height="24dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="150dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <SeekBar
             android:id="@+id/playBar"
-            android:thumbTint="@color/colorPrimaryRed"
             android:layout_width="224dp"
-            android:layout_height="24dp"
+            android:layout_height="25dp"
+            android:thumbTint="@color/colorWmRed"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
 
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintSongControl"
+        android:layout_width="240dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/defaultLen"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/button_deflen"
+            android:gravity="center_vertical|center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintButtons"
         android:layout_width="240dp"
         android:layout_height="24dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="128dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/butToggle"
-            android:layout_width="12dp"
-            android:layout_height="12dp"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
             android:background="@drawable/button_toggle"
             android:gravity="center_vertical|center_horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/butRewind"
-            android:layout_width="8dp"
-            android:layout_height="8dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
             android:background="@drawable/button_rewind"
             android:gravity="center_vertical|center_horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
 
+    <Button
+        android:id="@+id/quickSave"
+        android:background="@drawable/button_save"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:thickness="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintProgress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintSong"
+        app:layout_constraintVertical_bias="0.454" />
+
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constrainGenres"
         android:layout_width="368dp"
-        android:layout_height="280dp"
+        android:layout_height="300dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -130,10 +170,10 @@
         android:id="@+id/timeCurrent"
         android:layout_width="60dp"
         android:layout_height="20dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="150dp"
+        android:gravity="right"
         android:textAppearance="?android:attr/textAppearanceSmall"
         app:layout_constraintEnd_toStartOf="@+id/constraintButtons"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -141,11 +181,23 @@
         android:id="@+id/timeFinal"
         android:layout_width="60dp"
         android:layout_height="20dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="150dp"
+        android:gravity="left"
         android:textAppearance="?android:attr/textAppearanceSmall"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/constraintButtons"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lengSong"
+        android:layout_width="64dp"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        app:layout_constraintEnd_toEndOf="@+id/constrainGenres"
+        app:layout_constraintStart_toStartOf="@+id/constrainGenres"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -153,19 +205,11 @@
         android:layout_width="368dp"
         android:layout_height="20dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="96dp"
+        android:gravity="center"
         android:textAppearance="?android:attr/textAppearanceSmall"
         app:layout_constraintEnd_toEndOf="@+id/constrainGenres"
         app:layout_constraintStart_toStartOf="@+id/constrainGenres"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/wmLogo"
-        android:layout_width="320dp"
-        android:layout_height="64dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wavematters" />
-
-    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

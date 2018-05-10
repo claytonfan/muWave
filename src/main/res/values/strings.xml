@@ -1,8 +1,16 @@
 <resources>
-    <string name="app_name">muWave</string>
+    <string name="app_name">μWave</string>
+    <string name="wmLogo">w a ve e m a t t e r s</string>
     <string name="genres">Genres</string>
     <string name="play"><![CDATA[>]]></string>
     <string name="rewind"><![CDATA[<<]]></string>
     <string name="forward"><![CDATA[>>]]></string>
     <string name="pause">||</string>
+    <string name="wmTitle">Generate Song for </string>
+    <string name="save">s&#160;&#160;a&#160;&#160;v&#160;&#160;e</string>
+    <string-array name="createSong">
+        <item>Create and Play</item>
+        <item>Create Now. Play later</item>
+        <item>Cancel</item>
+    </string-array>
 </resources>

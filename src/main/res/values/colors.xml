@@ -5,5 +5,15 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorPrimaryRed">#FF0000</color>
-    <color name="colorPauseYellow">#FFCC00</color>
+    <color name="colorWmRed">#FF0022</color>
+    <color name="colorWmYellow">#FFCC00</color>
+    <color name="colorWmGreen">#1A6C00</color>
+    <color name="colorWmBlue">#0033FF</color>
+    <color name="colorRewindYellow">#FFCC00</color>
+    <color name="colorPauseYellow">#ffcc00</color>
+    <color name="colorPlayGreen">#1A6C00</color>
+    <color name="colorStopRed">#FF0000</color>
+    <color name="colorBlue">#0033ff</color>
+    <color name="colorProgBar">#FF0000</color>
+    <color name="colorHideBar">#CCCCCC</color>
 </resources>

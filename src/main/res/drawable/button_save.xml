@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <shape android:shape="ring"
+            android:useLevel="false"
+            android:innerRadiusRatio="3"
+            android:thicknessRatio="16">
+            <solid android:color="@color/colorWmYellow"/>
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape android:shape="ring"
+            android:useLevel="false"
+            android:innerRadiusRatio="10"
+            android:thicknessRatio="5">
+            <solid android:color="@color/colorWmYellow"/>
+        </shape>
+    </item>
+</selector>
