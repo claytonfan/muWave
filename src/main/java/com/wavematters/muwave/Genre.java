@@ -1,41 +1,31 @@
 package com.wavematters.muwave;
 
-import android.annotation.TargetApi;
-import android.os.Build;
 import android.support.annotation.NonNull;
-import android.support.annotation.RequiresApi;
 
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
 import java.util.Locale;
 import java.util.stream.IntStream;
-//
-// Class: To manage genre list
-//
+
 public class Genre {
 
     private String name;
     private String desc;
     private String spec;
     private String cmd;
+    private String prefix;
 
-    public String getName() {
-        return name;
-    }
-    public String getDesc() {
-        return desc;
-    }
-    public String getSpec() { return spec; }
-    public String getCmd () { return cmd;  }
-    public void setName( String name ) {
-        this.name = name;
-    }
-    public void setDesc( String desc ) {
-        this.desc = desc;
-    }
-    public void setSpec( String spec ) {
-        this.spec = spec;
-    }
-    public void setCmd ( String  cmd ) {
-        this.cmd  = cmd;
+    public String getName()   { return name;   }
+    public String getDesc()   { return desc;   }
+    public String getSpec()   { return spec;   }
+    public String getCmd()    { return cmd;    }
+    public String getPrefix() { return prefix; }
+    public void setName(   String   name ) { this.name   = name;   }
+    public void setDesc(   String   desc ) { this.desc   = desc;   }
+    public void setSpec(   String   spec ) { this.spec   = spec;   }
+    public void setCmd(    String    cmd ) { this.cmd    = cmd;    }
+    public void setPrefix( String prefix ) {
+        this.prefix = prefix;
     }
 
     public int length() {
@@ -54,7 +44,9 @@ public class Genre {
         return cmd.codePointAt(index);
     }
 
-    public int codePointBefore(int index) { return cmd.codePointBefore(index); }
+    public int codePointBefore(int index) {
+        return cmd.codePointBefore(index);
+    }
 
     public int codePointCount(int beginIndex, int endIndex) {
         return cmd.codePointCount(beginIndex, endIndex);
@@ -64,18 +56,11 @@ public class Genre {
         return cmd.offsetByCodePoints(index, codePointOffset);
     }
 
-    public void getChars(
-            int srcBegin, int srcEnd, @NonNull char[] dst, int dstBegin) {
+    public void getChars(int srcBegin, int srcEnd, @NonNull char[] dst, int dstBegin) {
         cmd.getChars(srcBegin, srcEnd, dst, dstBegin);
     }
 
-    @Deprecated
-    public void getBytes(
-            int srcBegin, int srcEnd, @NonNull byte[] dst, int dstBegin) {
-        cmd.getBytes(srcBegin, srcEnd, dst, dstBegin);
-    }
-
-    public boolean contentEquals(@NonNull StringBuffer sb) {
+     public boolean contentEquals(@NonNull StringBuffer sb) {
         return cmd.contentEquals(sb);
     }
 
@@ -136,39 +121,12 @@ public class Genre {
         return cmd.contains(s);
     }
 
-    public String replaceFirst(
-            @NonNull String regex, @NonNull String replacement) {
-        return cmd.replaceFirst(regex, replacement);
-    }
-
-    public String replaceAll(
-            @NonNull String regex, @NonNull String replacement) {
-        return cmd.replaceAll(regex, replacement);
-    }
-
-    public String replace(
-            @NonNull CharSequence target, @NonNull CharSequence replacement) {
-        return cmd.replace(target, replacement);
-    }
-
     public String[] split(@NonNull String regex, int limit) {
         return cmd.split(regex, limit);
     }
 
     public String[] split(@NonNull String regex) {
         return cmd.split(regex);
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    public static String join(
-            CharSequence delimiter, CharSequence... elements) {
-        return String.join(delimiter, elements);
-    }
-
-    @TargetApi(Build.VERSION_CODES.O)
-    public static String join(
-            CharSequence delimiter, Iterable<? extends CharSequence> elements) {
-        return String.join(delimiter, elements);
     }
 
     public String toLowerCase(@NonNull Locale locale) {
@@ -198,12 +156,9 @@ public class Genre {
     public static String format(@NonNull String format, Object... args) {
         return String.format(format, args);
     }
-
-    public static String format(
-            Locale l, @NonNull String format, Object... args) {
+    public static String format(Locale l, @NonNull String format, Object... args) {
         return String.format(l, format, args);
     }
-
     public static String valueOf(Object obj) {
         return String.valueOf(obj);
     }
@@ -215,16 +170,12 @@ public class Genre {
     public static String valueOf(@NonNull char[] data, int offset, int count) {
         return String.valueOf(data, offset, count);
     }
-
-    public static String copyValueOf(
-            @NonNull char[] data, int offset, int count) {
+    public static String copyValueOf(@NonNull char[] data, int offset, int count) {
         return String.copyValueOf(data, offset, count);
     }
-
     public static String copyValueOf(@NonNull char[] data) {
         return String.copyValueOf(data);
     }
-
     public static String valueOf(boolean b) {
         return String.valueOf(b);
     }
@@ -247,18 +198,6 @@ public class Genre {
 
     public static String valueOf(double d) {
         return String.valueOf(d);
-    }
-
-    public String intern() {
-        return cmd.intern();
-    }
-
-    public IntStream chars() {
-        return cmd.chars();
-    }
-
-    public IntStream codePoints() {
-        return cmd.codePoints();
     }
 
     @Override

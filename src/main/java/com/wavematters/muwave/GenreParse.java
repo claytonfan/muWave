@@ -1,20 +1,19 @@
 package com.wavematters.muwave;
 
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserFactory;
+import android.util.Log;
 
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-//
-// Class: Parse genre specification input file
-// using the XMLPullParser
-//
+
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserFactory;
+
 public class GenreParse {
 
     List<Genre> genres;
 
-    private Genre genre;
+    private Genre  genre;
     private String text;
 
     public GenreParse() {
@@ -46,36 +45,47 @@ public class GenreParse {
     }
 
     public List<Genre> parse(InputStream is) {
+
         XmlPullParserFactory factory = null;
-        XmlPullParser parser = null;
+        XmlPullParser        parser  = null;
+
         try {
             factory = XmlPullParserFactory.newInstance();
             factory.setNamespaceAware(true);
             parser = factory.newPullParser();
-            parser.setInput(is, null);
+            parser.setInput( is, null);
             int eventType = parser.getEventType();
-            while (eventType != XmlPullParser.END_DOCUMENT) {
+            while( eventType != XmlPullParser.END_DOCUMENT) {
                 String tagname = parser.getName();
-                switch (eventType) {
+                //Log.i( "WM", "Tag  = " + tagname  );  //
+                switch( eventType ) {
                     case XmlPullParser.START_TAG:
-                        if (tagname.equalsIgnoreCase("genre")) {
+                        if(tagname.equalsIgnoreCase("genre")) {
                             genre = new Genre();
                         }
                         break;
                     case XmlPullParser.TEXT:
                         text = parser.getText();
+                        //Log.i( "WM", "Text = " + text  );  //
                         break;
                     case XmlPullParser.END_TAG:
-                        if (tagname.equalsIgnoreCase("genre")) {
+                        if(tagname.equalsIgnoreCase("genre")) {
                             genres.add(genre);
-                        } else if (tagname.equalsIgnoreCase("name")) {
+                        }
+                        else if(tagname.equalsIgnoreCase("name")) {
                             genre.setName(text);
-                        } else if (tagname.equalsIgnoreCase("desc")) {
+                        }
+                        else if(tagname.equalsIgnoreCase("desc")) {
                             genre.setDesc(text);
-                        } else if (tagname.equalsIgnoreCase("spec")) {
+                        }
+                        else if(tagname.equalsIgnoreCase("spec")) {
                             genre.setSpec(text);
-                        } else if (tagname.equalsIgnoreCase("cmd")) {
+                        }
+                        else if(tagname.equalsIgnoreCase("cmd")) {
                             genre.setCmd(text);
+                        }
+                        else if(tagname.equalsIgnoreCase("prefix")) {
+                            genre.setPrefix(text);
                         }
                         break;
                     default:
@@ -83,7 +93,8 @@ public class GenreParse {
                 }
                 eventType = parser.next();
             }
-        } catch (Exception e) {
+        }
+        catch( Exception e ) {
             e.printStackTrace();
         }
         return genres;
