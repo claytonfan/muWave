@@ -85,7 +85,7 @@ int eco( T_PARAM *p )
       if( encode( world.gen0, p ) >= NORMAL ) {
 		do {
 		  organize( &world, p );
-		} while( fit_to_express(p) );
+		} while( !fit_to_express(p) );
 		compute_fitness(  &world, p);
 		enhance_ecosystem(&world, p);
 		display_final(p);
